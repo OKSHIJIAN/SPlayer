@@ -20,31 +20,7 @@ import ExcludeKeywords from "@/components/Modal/ExcludeKeywords.vue";
 
 // 用户协议
 export const openUserAgreement = () => {
-  const isAgree = window.localStorage.getItem("isAgree");
-  if (isAgree) return;
-  const modal = window.$modal.create({
-    preset: "card",
-    transformOrigin: "center",
-    autoFocus: false,
-    maskClosable: false,
-    closeOnEsc: false,
-    closable: false,
-    style: {
-      maxWidth: "70vw",
-    },
-    content: () => {
-      return h(UserAgreement, {
-        onClose: () => {
-          modal.destroy();
-          // 储存状态
-          window.localStorage.setItem("isAgree", Date.now().toString());
-        },
-      });
-    },
-    onEsc: () => {
-      window.$message.warning("请先阅读并同意用户协议");
-    },
-  });
+  window.localStorage.setItem("isAgree", Date.now().toString());
 };
 
 // 用户登录
