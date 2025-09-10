@@ -6,7 +6,6 @@ import { useDataStore } from "@/stores";
 import router from "@/router";
 import Login from "@/components/Modal/Login/Login.vue";
 import JumpArtist from "@/components/Modal/JumpArtist.vue";
-//import UserAgreement from "@/components/Modal/UserAgreement.vue";
 import SongInfoEditor from "@/components/Modal/SongInfoEditor.vue";
 import PlaylistAdd from "@/components/Modal/PlaylistAdd.vue";
 import batchList from "@/components/Modal/batchList.vue";
