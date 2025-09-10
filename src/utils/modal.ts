@@ -20,8 +20,11 @@ import ExcludeKeywords from "@/components/Modal/ExcludeKeywords.vue";
 
 // 用户协议
 export const openUserAgreement = () => {
-  window.localStorage.setItem("isAgree", Date.now().toString());
+  if (!window.localStorage.getItem("isAgree")) {
+    window.localStorage.setItem("isAgree", Date.now().toString());
+  }
 };
+
 
 // 用户登录
 export const openUserLogin = (showTip: boolean = false) => {
